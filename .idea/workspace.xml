@@ -80,6 +80,9 @@
       <find>getBooksCorrId</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -88,11 +91,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="17" />
-    <option name="width" value="1279" />
-    <option name="height" value="751" />
+    <option name="x" value="993" />
+    <option name="y" value="25" />
+    <option name="width" value="927" />
+    <option name="height" value="1055" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -137,8 +141,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537173250435" />
-    <property name="last_opened_file_path" value="$USER_HOME$/RabbitMQ/slf4j-simple-1.7.22.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537173528163" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BookStore_Client_RabbitMQ" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -234,12 +238,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3106796" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31135136" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2837109" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.32901832" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.2351672" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
