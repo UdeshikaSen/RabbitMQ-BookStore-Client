@@ -1,12 +1,10 @@
-
 import java.util.UUID
-
-import com.rabbitmq.client._
 import java.util.concurrent.ArrayBlockingQueue
 
-import util.control.Breaks._
+import com.rabbitmq.client._
+
 import scala.io.StdIn
-import scala.util.control.Breaks
+import scala.util.control.Breaks._
 
 object BookStoreClient {
 
@@ -35,7 +33,7 @@ object BookStoreClient {
     channel.queueDeclare(REQUEST_QUEUE_B, false, false, false, null)
     channel.queueDeclare(REQUEST_QUEUE_C, false, false, false, null)
 
-    // Callback consumer - to consume the response get from the server
+    // callback consumer - to consume the response sent from the server
     val consumer = declareCallBackConsumer(channel)
 
     try {
@@ -55,8 +53,6 @@ object BookStoreClient {
               val bookType: String = StdIn.readLine()
               // publish request to add book
               publishRequest(channel, REQUEST_QUEUE_A, RESPONSE_QUEUE, bookId + "," + bookName + "," + bookType, addBookCorrId)
-              // consume the response published by the book store server
-              channel.basicConsume(RESPONSE_QUEUE, true, consumer)
 
             case "B" =>
               println("You have selected to get a book from the store")
@@ -64,17 +60,16 @@ object BookStoreClient {
               val bookId: String = StdIn.readLine()
               // publish request to get a book
               publishRequest(channel, REQUEST_QUEUE_B, RESPONSE_QUEUE, bookId, getBookCorrId)
-              // consume the response published by the book store server
-              channel.basicConsume(RESPONSE_QUEUE, true, consumer)
 
             case "C" =>
               println("You have selected to get books from the store")
               // publish request to get books
               publishRequest(channel, REQUEST_QUEUE_C, RESPONSE_QUEUE, "", getBooksCorrId)
-              // consume the response published by the book store server
-              channel.basicConsume(RESPONSE_QUEUE, true, consumer)
           }
 
+          println("Waiting for server response....")
+          // consume the response published by the book store server
+          channel.basicConsume(RESPONSE_QUEUE, true, consumer)
           println(response.take())
           println("")
           println("Press E to exit or C to continue")
@@ -85,14 +80,14 @@ object BookStoreClient {
       }
     }
     catch {
-      case ex: Exception => println("Error occurred")
+      case ex: Exception => println("Error occurred" + ex.printStackTrace())
     }
 
     channel.close()
     connection.close()
   }
 
-  // Publish the request to the book store server
+  // publish the request to the book store server
   def publishRequest(channel: Channel, requestQueue: String, responseQueue: String, message: String, corrId: String): Unit = {
     val props = new AMQP.BasicProperties.Builder().correlationId(corrId).replyTo(responseQueue).build
     channel.basicPublish("", requestQueue, props, message.getBytes("UTF-8"))

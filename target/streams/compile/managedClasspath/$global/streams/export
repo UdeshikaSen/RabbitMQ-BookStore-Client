@@ -1,1 +1,1 @@
-/home/udeshika/.sbt/boot/scala-2.12.6/lib/scala-library.jar
+/home/udeshika/.sbt/boot/scala-2.12.6/lib/scala-library.jar:/home/udeshika/.ivy2/cache/space.spacelift/amqp-scala-client_2.12/jars/amqp-scala-client_2.12-2.0.0.jar:/home/udeshika/.ivy2/cache/com.rabbitmq/amqp-client/jars/amqp-client-4.0.2.jar:/home/udeshika/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.21.jar

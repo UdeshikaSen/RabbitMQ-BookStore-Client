@@ -7,8 +7,46 @@
 		revision="0.1"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180914162308"/>
+		date="20180917165934"/>
 	<dependencies>
+		<module organisation="space.spacelift" name="amqp-scala-client_2.12">
+			<revision name="2.0.0" status="release" pubdate="20170127070505" resolver="public" artresolver="public" homepage="http://spacelift.space" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="successful" details="" size="2708" time="1083" location="/home/udeshika/.ivy2/cache/space.spacelift/amqp-scala-client_2.12/ivy-2.0.0.xml" searched="true" original-local-location="/home/udeshika/.ivy2/cache/space.spacelift/amqp-scala-client_2.12/ivy-2.0.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/space/spacelift/amqp-scala-client_2.12/2.0.0/amqp-scala-client_2.12-2.0.0.pom"/>
+				<caller organisation="default" name="bookstoreclient_rabbitmq_2.12" conf="compile-internal, compile, provided, optional" rev="2.0.0" rev-constraint-default="2.0.0" rev-constraint-dynamic="2.0.0" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="amqp-scala-client_2.12" type="jar" ext="jar" status="successful" details="" size="568656" time="3530" location="/home/udeshika/.ivy2/cache/space.spacelift/amqp-scala-client_2.12/jars/amqp-scala-client_2.12-2.0.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/space/spacelift/amqp-scala-client_2.12/2.0.0/amqp-scala-client_2.12-2.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.rabbitmq" name="amqp-client">
+			<revision name="4.0.2" status="release" pubdate="20170120190035" resolver="public" artresolver="public" homepage="http://www.rabbitmq.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="ASL 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<license name="GPL v2" url="http://www.gnu.org/licenses/gpl-2.0.txt"/>
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.txt"/>
+				<metadata-artifact status="successful" details="" size="31129" time="2333" location="/home/udeshika/.ivy2/cache/com.rabbitmq/amqp-client/ivy-4.0.2.xml" searched="true" original-local-location="/home/udeshika/.ivy2/cache/com.rabbitmq/amqp-client/ivy-4.0.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/4.0.2/amqp-client-4.0.2.pom"/>
+				<caller organisation="space.spacelift" name="amqp-scala-client_2.12" conf="default, compile, runtime, master" rev="4.0.2" rev-constraint-default="4.0.2" rev-constraint-dynamic="4.0.2" callerrev="2.0.0"/>
+				<artifacts>
+					<artifact name="amqp-client" type="jar" ext="jar" status="successful" details="" size="481499" time="4141" location="/home/udeshika/.ivy2/cache/com.rabbitmq/amqp-client/jars/amqp-client-4.0.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/4.0.2/amqp-client-4.0.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.21" status="release" pubdate="20160405000640" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="successful" details="" size="2775" time="1027" location="/home/udeshika/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.21.xml" searched="true" original-local-location="/home/udeshika/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.21.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.pom"/>
+				<caller organisation="com.rabbitmq" name="amqp-client" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="4.0.2"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="successful" details="" size="41071" time="2493" location="/home/udeshika/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.21.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang" name="scala-library">
 			<revision name="2.12.6" status="release" pubdate="20180427141006" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
